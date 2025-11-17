@@ -4,6 +4,7 @@ void bfs(int adj[N][N],int start){
 	int visited[N]={0},q[N],f=0,r=0;
 	int i,node;
 	q[r++]=start;
+	visited[start] = 1;
 	while(f<r){
 		node=q[f++];
 		printf("%c\t",node +65);
@@ -23,7 +24,7 @@ int main(){
 	printf("Enter adjacency matrix:\n");
 	for(int i=0;i<N;i++){
 		for(int j=0;j<N;j++){
-			scanf("%d",&adj[i][j]);0
+			scanf("%d",&adj[i][j]);
 		}
 	}
 	bfs(adj,0);
